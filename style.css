@@ -1,0 +1,442 @@
+:root{
+
+    --main-color: rgb(5,253,249);
+    --bg-color:rgb(21,21,21);
+    --second-color:rgb(8,8,8);
+}
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+
+    font-size: 60%;
+}
+
+body{
+
+    background-color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span{
+
+    color: var(--main-color);
+}
+
+
+.navbar{
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 10%;
+    color: white;
+    backdrop-filter: blur(-5);
+    background-color: var(--second-color);
+    z-index: 1000;
+}
+
+
+h1{
+
+    font-size:3rem;
+}
+
+h1:hover{
+
+    transform: scale(1.1);    
+    transition: 0.3s ease-in-out;
+
+}
+
+.list a{
+
+    text-decoration: none;
+    margin-left: 2rem;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.list a:hover{
+
+    border-bottom: 2px solid var(--main-color);
+}
+
+.home{
+
+    width: 100%;
+    padding: 15rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.image{
+
+    width: 32vw;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    box-shadow: 0 0 25px var(--main-color);
+
+}
+
+.image:hover{
+
+    box-shadow: 0 0 25px  var(--main-color),
+    0 0 50px  var(--main-color),
+    0 0 80px var(--main-color);
+
+
+
+}
+
+.home-content{
+
+    padding: 5rem 2rem;
+}
+
+.home-content h2{
+
+    font-size: 6rem;
+}
+
+.home-content h3{
+
+    font-size: 2.8rem;
+    margin: 2rem 3rem;
+    position: relative;
+
+}
+
+.home-content p, 
+.about-content p {
+    max-width: 850px;  /* Limit the maximum width */
+    margin: 0 auto;    /* Center the paragraph */
+  /* Maintain good readability */
+}
+
+.home-content p{
+
+    font-size: 1.8rem;
+    line-height: 1.7;
+}
+
+.social-icons{
+
+    margin: 3rem 2rem;
+    font-size: 3rem;
+
+}
+
+.social-icons i{
+
+    margin-left: 1rem;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    padding: 5px;
+    box-shadow: 0 0 25px var(--main-color);
+
+}
+
+.social-icons i:hover{
+
+    transform: translateY(-5px) scale(1.1);
+
+    background-color: var(--main-color);
+    color: white;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 0 25px  var(--main-color),
+    0 0 50px  var(--main-color),
+    0 0 80px var(--main-color);
+
+}
+
+.btn{
+
+    padding: 1.2rem 4rem;
+    border-radius: 10rem;
+    border: none;
+    border: 2px solid transparent;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    font-weight: 700;
+    color: white;
+    background-color: var(--main-color);
+}
+
+.btn:hover{
+
+    box-shadow: 0 0 25px  var(--main-color),
+    0 0 50px  var(--main-color);
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+
+.about{
+
+    margin-top: 7rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-content{
+
+    text-align: left;
+}
+
+.about-content h2{
+
+    font-size: 5rem;
+}
+
+.about-content p{
+
+    margin: 2rem 0;
+    line-height: 1.7;
+}
+
+.services{
+
+color: white;
+
+}
+
+.services h2{
+
+    font-size: 5rem;
+    text-align: center;
+}
+
+.services-container{
+
+    display: grid;
+grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+gap: 2rem;
+margin: 3rem 2rem;
+
+}
+
+.service-box{
+
+    height: 280px;
+    padding: 1.5rem;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+    border-radius: 2rem;
+    background-color: var(--main-color);
+    
+
+}
+
+.service-box:hover{
+
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 25px  var(--main-color);
+    transform: scale(1.035);
+    transition: 0.3s ease-in-out;
+
+    
+
+}
+
+.service-box h2{
+
+    font-size: 4rem;
+}
+
+.service-box p{
+
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+.contact {
+    margin-top: 8rem;
+}
+
+.contact h2 {
+    font-size: 5rem;
+    text-align: center;
+    color: white;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 3rem;
+    /* Avoid using percentages for form margins on both sides */
+}
+
+form input,
+form textarea {
+    width: 90%;
+    max-width: 400px; /* Set a max-width to control size on large screens */
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    color: white;
+}
+
+form input:hover,
+form textarea:hover {
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+form textarea {
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+
+.footer{
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-color);
+    padding: 2rem 1rem;
+
+}
+
+.copyright{
+
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+.menu{
+
+    font-size: 3rem;
+    font-weight: 800;
+    display: none;
+}
+
+.menu:hover{
+
+    transform: scale(1.1);
+}
+
+.menu:active{
+
+    opacity: 0.5;
+
+}
+
+.sec-text{
+
+    position: relative;
+}
+
+.sec-text::before{
+
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--main-color);
+    animation: animate 3s linear infinite; /* Specify duration, timing function, and iteration count */
+
+}
+
+@keyframes animate {
+    0% {
+        left: 0; /* Start off-screen */
+    }
+    50% {
+        left: 100%; /* Move to the far right */
+    }
+    100% {
+        left: 0; /* End back at the start position */
+    }
+}
+
+
+
+
+@media (max-width:1285px){
+
+
+    .menu{
+
+        display: block;
+    }
+
+    .list{
+
+        position: absolute;
+        right: 0;
+        width: 40%;
+        top: 8px;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        border-top: 2px solid var(--main-color);
+        border-top-left-radius: 10px;
+        padding: 1rem;
+        border-bottom-left-radius: 10px;
+        display: none;
+    }
+    .list a{
+
+        display: block;
+        margin-top: 1.5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    .about{
+
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about h2{
+
+        text-align: center;
+    }
+
+    .about p{
+
+        text-align: center;
+    }
+
+    .about-btn{
+
+        text-align: center;
+    }
+
+    .home-img img, .about img{
+
+        width: 52vw;
+    }
+
+}
+
